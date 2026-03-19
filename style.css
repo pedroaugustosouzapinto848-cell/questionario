@@ -39,6 +39,11 @@ button {
     border-radius: 5px;
 }
 
+.resultado{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
 @media (min-width: 768px) {
     .container {
         padding: 30px;
