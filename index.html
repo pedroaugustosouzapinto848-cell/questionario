@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questionário</title>
+    <title>Questionário - Quem é Pedro?</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
-
 <body>
     <header>
         <h1>Você é um Pedro?</h1>
     </header>
     
     <main>
-        <form>
+        <form id="quizForm">
             <div class="container">
+                <div style="margin-bottom: 20px;">
+                    <label for="nome_usuario"><strong>Seu Nome:</strong></label><br>
+                    <input type="text" id="nome_usuario" placeholder="Digite seu nome para o ranking" required style="width: 100%; padding: 10px; margin-top: 5px;">
+                </div>
                 <hr>
+
                 <p>1. Você já acordou e voltou a dormir só “por mais 5 minutinhos”?</p>
                 <label><input type="radio" name="resposta_1" value="1"> Sim</label>
                 <label><input type="radio" name="resposta_1" value="0"> Não</label>
@@ -77,18 +80,20 @@
                 <label><input type="radio" name="resposta_15" value="1"> Sim</label>
                 <label><input type="radio" name="resposta_15" value="0"> Não</label>
                 <hr>
-                <p>16.Já fingiu que não viu alguém pra não conversar?</p>
+                <p>16. Já fingiu que não viu alguém pra não conversar?</p>
                 <label><input type="radio" name="resposta_16" value="1"> Sim</label>
                 <label><input type="radio" name="resposta_16" value="0"> Não</label>
                 <hr>
+
                 <br><br>
                 <button type="button" onclick="calcularResultado()">Ver Resultado</button>
-                <button type="button" onclick="window.location.reload()">Voltar</button>
-                <div class="resultado" id="resultado"></div>
+                <button type="button" onclick="window.location.reload()">Reiniciar</button>
+                
+                <div class="resultado" id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
             </div>
-            
         </form>
     </main>
-   
+
+    <script src="script.js"></script>
 </body>
 </html>
